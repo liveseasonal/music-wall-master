@@ -1,0 +1,17 @@
+<h1> I am the greatest song page of all time</h1>
+
+<p>This is not the greatest song in the world. This is but a tribute. Ayayayayayyayay yayayayayay. Rock! </p>
+
+
+
+
+<% @songs.each do |song| %>
+  <div class="song">
+    <h3><a href="/songs/<%= song.id %>"><%=song.song_title%></a> <small>(by: <%= song.author%>)</small></h3>
+    <p>
+      <a href="/songs/<%= song.id %>"><%= song.URL %></a>
+    </p>
+  </div>
+<%end%> 
+
+<button><a href="/songs/new">Add to the Collection</a></button>     
