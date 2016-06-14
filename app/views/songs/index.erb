@@ -1,10 +1,30 @@
-<h1> I am the greatest song page of all time</h1>
+<div class="col-md-offset-4 col-md-4">
 
-<p>This is not the greatest song in the world. This is but a tribute. Ayayayayayyayay yayayayayay. Rock! </p>
+  <h1> Greatest song page</h1>
 
+  <p>This is not the greatest song in the world. This is but a tribute. </p>
+</div>
 
+<!-- Attempted and failed for now -->
+<!-- 
+<div class="row">
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="..." alt="...">
+      <div class="caption">
+      <% @songs.each do |song| %>
+       <div class="song">
+        <h3><a href="/songs/<%= song.id %>"><%=song.song_title%></a> <small>(by: <%= song.author%>)</small></h3>
+        <p><a href="/songs/<%= song.id %>"><%= song.URL %></a></p>
+        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+      </div>
+      <%end%> 
+      </div>
+    </div>
+  </div>
+</div> -->
 
-
+<div class="col-md-offset-4 col-md-4">
 <% @songs.each do |song| %>
   <div class="song">
     <h3><a href="/songs/<%= song.id %>"><%=song.song_title%></a> <small>(by: <%= song.author%>)</small></h3>
@@ -15,3 +35,4 @@
 <%end%> 
 
 <button><a href="/songs/new">Add to the Collection</a></button>     
+</div>
