@@ -1,0 +1,23 @@
+
+/* songs section */
+.song-wrapper {
+  padding: 10%;
+  text-align: center;
+}
+
+.song {
+  display: inline-block;
+  width: 33%;
+}
+
+.song-button {
+  width: 20%;
+  background-color: red;
+  margin: auto;
+  
+}
+
+.song-header {
+  text-align: center;
+  height: 50%;
+}

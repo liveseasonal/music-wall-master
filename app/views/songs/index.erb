@@ -1,38 +1,62 @@
-<div class="col-md-offset-4 col-md-4">
+<div class="container">
 
-  <h1> Greatest song page</h1>
+<nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Songza</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li> <a href="#">Home</a></li>
+              <li class="active"><a href="/songs">Songs</a></li>
+              <li><a href="/songs/new">New Songs</a></li>
+            </ul>
+             <ul class="nav navbar-nav navbar-right">
+              <!-- <li><a href="../navbar-fixed-top/">Log In</a></li> -->
+              <li><a href="../login">Log In</a></li>
+              <li><a href="../signup">Sign Up</a></li>
+            </ul>
+           
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
 
+
+
+<!-- <div class="col-md-offset-4 col-md-4"> -->
+<div class="song-header">
+  <h1> Greatest song page</h1> 
   <p>This is not the greatest song in the world. This is but a tribute. </p>
 </div>
 
-<!-- Attempted and failed for now -->
-<!-- 
-<div class="row">
-  <div class="col-sm-6 col-md-4">
-    <div class="thumbnail">
-      <img src="..." alt="...">
-      <div class="caption">
-      <% @songs.each do |song| %>
-       <div class="song">
-        <h3><a href="/songs/<%= song.id %>"><%=song.song_title%></a> <small>(by: <%= song.author%>)</small></h3>
-        <p><a href="/songs/<%= song.id %>"><%= song.URL %></a></p>
-        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-      </div>
-      <%end%> 
-      </div>
-    </div>
-  </div>
-</div> -->
-
-<div class="col-md-offset-4 col-md-4">
+<div class="song-wrapper">
 <% @songs.each do |song| %>
   <div class="song">
     <h3><a href="/songs/<%= song.id %>"><%=song.song_title%></a> <small>(by: <%= song.author%>)</small></h3>
+    <p>
+    <img src="<%=song.URL%>" width="200px" height="200px"/>
+    <!-- <img src="/images/the_stones.jpeg"/>-->
+    </p>
     <p>
       <a href="/songs/<%= song.id %>"><%= song.URL %></a>
     </p>
   </div>
 <%end%> 
+<hr>
+<hr>
+<!-- <button type="button" class="btn btn-danger"><a href="/songs/new"> Add to the Collection</a></button>  -->
+<button type="button" class="song-button"><a href="/songs/new"> Add to the Collection</a></button> 
+</div>
 
-<button><a href="/songs/new">Add to the Collection</a></button>     
+<!-- </div> -->
+
+<!-- <button><a href="/songs/new">Add to the Collection</a></button>  -->
+<!-- <button type="button" class="btn btn-danger"><a href="/songs/new"> Add to the Collection</a></button>  -->   
+</div>
 </div>

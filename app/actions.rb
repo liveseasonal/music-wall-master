@@ -34,11 +34,6 @@ post '/songs' do
   end   
 end
 
-# get '/navbar-fixed-top/' do
-#   erb :login
-# end
-
-
 
 # Show the login form
 get '/login' do
@@ -60,10 +55,39 @@ post '/login' do
   end
 end
 
+#logout
+
 get '/logout' do
   session.clear
   #TODO flash message
   redirect '/'
 end
+
+#Signup
+
+get '/signup' do 
+  erb :signup
+end  
+
+#Its an action So for the below we have specified in the signup.erb that we will perform the action below.
+
+post '/user/create' do 
+  # binding.pry
+ 
+  @user = User.new(
+    email: params[:email],
+    password: params[:password],
+    )
+
+  if @user.save
+    redirect '/login'
+  else
+    erb :index
+    puts "Failed" 
+  end   
+end
+
+
+
 
 

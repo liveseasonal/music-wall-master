@@ -18,22 +18,23 @@
    
    <div>
     <label>Song Title:</label>
-    <input type="text" name="song_title" value="<%=@song && @song.song_title %>">
+    <input type="text" name="song_title" class="form-control" value="<%=@song && @song.song_title %>">
   </div>
 
   <div>
     <label>Author:</label>
-    <input type="text" name="author" value="<%=@song && @song.author %>">
+    <input type="text" name="author" class="form-control" value="<%=@song && @song.author %>">
   </div>
 
   <div>
     <label>URL:</label>
-    <input type="url" name="URL" value="<%=@song && @song.URL %>">
+    <input type="url" name="URL" class="form-control" value="<%=@song && @song.URL %>">
   </div>
 
   <div>
     <br>
-    <input type="submit" value ="Create Song">
+    <button class="btn btn-lg btn-primary btn-block" type="submit" value ="Create Song">Create Song</button>
+    <!-- <input type="submit" value ="Create Song"> -->
   </div>
 
 
